@@ -1,6 +1,6 @@
 function FirstComponent(){
     return (
-        <div>
+        <div className="firtComponent">
             <p>Primeiro componente</p>
         </div>
     )

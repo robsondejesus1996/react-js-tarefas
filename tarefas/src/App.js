@@ -1,12 +1,29 @@
+import "./App.css";
 
-import './App.css';
-import FirstComponent from "../src/components/FirstComponent"
+import { useState, useEffect } from "react";
+import { BsTrash, BsBookmarkCheck, BsBookmarkCheckFill } from "react-icons/bs";
+
+const API = "http://localhost:5000/";
 
 function App() {
+  const [title, setTitle] = useState("");
+  const [time, setTime] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   return (
     <div className="App">
-      <h2>Sistema de Tarefas</h2>
-      <FirstComponent/>
+      <div className="todo-header">
+        <h1>React Todo</h1>
+      </div>
+
+      <div className="form-todo">
+        <p>Formulario</p>
+      </div>
+
+      <div className="list-todo">
+        <p>List todo</p>
+      </div>
     </div>
   );
 }
